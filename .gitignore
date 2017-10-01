@@ -30,6 +30,23 @@
 *.exe
 *.out
 *.app
+
+# Base Projects Visual Studio
+*.sln
+*.ilk
+*.pdb
+*.vcxproj
+*.vcxproj.filters
+stdafx.cpp
+stdafx.h
+targetver.h
+
+#log
+*.log
+*.tlog
+
+# Visual studio files
+**/Debug/
 **/.vs/
 
 # Unwanted ReadMeFiles
