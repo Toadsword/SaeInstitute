@@ -1,7 +1,7 @@
 // Exercice 7.1 : Tic tac toe
 // Definition : Play a game of tic tac toe on the windows console with a friend
 // Author : Duncan Bourquard
-// Date : 21.09.17
+// Date : 30.09.17
 
 #include <iostream>
 #include <string.h>
@@ -12,7 +12,7 @@ const int NUM_ROWS = 3;
 //	Description :
 //		Fills the array with "_"
 //	Param : 
-//		gameMap : Array to fill to prepare the game
+//		char* gameMap : Array to fill to prepare the game
 void generateMap(char* gameMap[][NUM_COLUMNS])
 {
 	for (int i_column = 0; i_column < NUM_COLUMNS; i_column++) {
@@ -26,7 +26,7 @@ void generateMap(char* gameMap[][NUM_COLUMNS])
 //	Description :
 //		Display the current game state on the screen
 //	Param : 
-//		gameMap : Data of the game
+//		char* gameMap : Data of the game
 void showMap(char* gameMap[][NUM_COLUMNS])
 {
 	system("cls");
@@ -46,8 +46,8 @@ void showMap(char* gameMap[][NUM_COLUMNS])
 //		Asks the player for a free emplacement, output an error if it is not valid 
 //		and continuously asks for a valid one.
 //	Param : 
-//		gameMap : Data of the game
-//		currentPlayer : Takes the char of the current player
+//		char* gameMap : Data of the game
+//		char* currentPlayer : Takes the char of the current player
 void setNewPosition(char* gameMap[][NUM_COLUMNS], char* currentPlayer)
 {
 	int row = 0;
@@ -77,8 +77,8 @@ void setNewPosition(char* gameMap[][NUM_COLUMNS], char* currentPlayer)
 //	Description :
 //		Check if one player has won
 //	Param : 
-//		gameMap : Data of the game
-//		c(urrent)Player : Char of the currently checked player
+//		char* gameMap[][] : Data of the game
+//		char* c(urrent)Player : Char of the currently checked player
 //	Return :
 //		true if the currentPlayer has a valid, else false
 bool checkWin(char* gameMap[][NUM_COLUMNS], char* cPlayer)
@@ -100,6 +100,10 @@ bool checkWin(char* gameMap[][NUM_COLUMNS], char* cPlayer)
 	return false;
 }
 
+//	Description :
+//		Main game process
+//	Param : 
+//		gameMap : Data of the game
 void playGame(char* gameMap[][NUM_COLUMNS])
 {
 	char* player1 = "X";
@@ -149,4 +153,3 @@ int main()
 	system("pause");
     return EXIT_SUCCESS;
 }
-
