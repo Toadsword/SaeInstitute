@@ -65,7 +65,7 @@ int main()
 	int* p = ArrayInt;
 
 	std::cout << "Please enter 10 numbers.\n";
-
+		
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		*(p + i) = askNumber();
@@ -73,7 +73,6 @@ int main()
 
 	std::cout << "The highest number you entered is : " << *(maxFromArray(ARRAY_SIZE, p)) << ".\n";
 	std::cout << "The lowest number you entered is : " << *(minFromArray(ARRAY_SIZE, p)) << ".\n";
-
 
 	system("pause");
 	return 0;
