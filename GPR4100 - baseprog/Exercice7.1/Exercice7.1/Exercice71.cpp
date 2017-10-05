@@ -4,7 +4,6 @@
 // Date : 30.09.17
 
 #include <iostream>
-#include <string.h>
 
 const int NUM_COLUMNS = 3;
 const int NUM_ROWS = 3;

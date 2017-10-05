@@ -1,14 +1,11 @@
 ////////////////////////////////////////////////////////////////
-// Title : Exercice4.1.cpp - avergae of numbers
-// Definition: Asks for five numbers then returns the average of them
+// Title : Exercice4.2.cpp - avergae of numbers
+// Definition: Asks for numbers to the user, then returns the average of them
 // Author : Duncan Bourquard
 // Date : 14.09.17
 
 #include "stdafx.h"
 #include <iostream>
-#include <array>
-
-#define NB_INPUTS 5
 
 int askNumber()
 {
@@ -27,18 +24,20 @@ int askNumber()
 
 int main()
 {
-	std::array<int, NB_INPUTS> arrayInt;
 	double sumInputs = 0;
 	double averageInputs = 0;
+	int userNbInput = 1;
 
-	std::cout << "Please enter " << NB_INPUTS << " numbers : \n";
-	for (int i = 0; i < NB_INPUTS; i++)
+	std::cout << "With how many numbers do you want to make the average? ";
+	userNbInput = askNumber();
+
+	for (int i = 1; i <= userNbInput; i++)
 	{
-		arrayInt[i] = askNumber();
-		sumInputs += arrayInt[i];
+		std::cout << "Please enter the " << i << " number : ";
+		sumInputs += askNumber();
 	}
 
-	averageInputs = sumInputs / arrayInt.size();
+	averageInputs = sumInputs / userNbInput;
 
 	std::cout << "The average of your numbers is " << averageInputs << ".\n";
 

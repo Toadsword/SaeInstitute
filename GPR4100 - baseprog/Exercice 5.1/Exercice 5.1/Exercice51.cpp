@@ -25,8 +25,10 @@ int fib(int n)
 {
 	int lowNum = 0;
 	int highNum = 1;
+	if (n == 1)
+		return lowNum;
 
-	for (int i = 1; i < n; i++)
+	for (int i = 0; i < n-2; i++)
 	{
 		int tmp_lownum = highNum;
 		highNum += lowNum;

@@ -27,7 +27,7 @@ int askNumber()
 	return userInput;
 }
 
-int maxFromArray(int numbers_length, int* numbersArray)
+int max(int numbers_length, int* numbersArray)
 {
 	int max = std::numeric_limits<int>::min(); // We begin from the bottom
 	for (int i = 0; i < numbers_length; i++)
@@ -38,7 +38,7 @@ int maxFromArray(int numbers_length, int* numbersArray)
 	return max;
 }
 
-int minFromArray(int numbers_length, int* numbersArray)
+int min(int numbers_length, int* numbersArray)
 {
 	int min = std::numeric_limits<int>::max(); // We begin from the top
 	for (int i = 0; i < numbers_length; i++)
