@@ -8,23 +8,6 @@
 
 const int MAX_NUM_FIBO = 4000000;
 
-// Fonction forcant l'utilisateur à retourner un nombre
-int askNumber()
-{
-	int userInput = 0;
-	std::cin >> userInput;
-
-	while (std::cin.fail())
-	{
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << "I said a number. Try again : ";
-		std::cin >> userInput;
-	}
-	return userInput;
-}
-
-
 int main()
 {
 	int lowNum = 0;

@@ -1,5 +1,8 @@
-// OOPex51.cpp : Définit le point d'entrée pour l'application console.
-//
+// OOP ex 5.1 - Collision
+// Description : Check if two boxes touche themselves in a grid.
+// Author : Duncan Bourquard
+// Date : 03.10.2017
+
 
 #include <iostream>
 #include "box.h"

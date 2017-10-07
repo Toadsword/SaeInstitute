@@ -1,11 +1,16 @@
 #ifndef SHAPE_H
 #define SHAPE_H
+
+class Shape;
+class Rectangle;
+class Circle;
+
 class Shape
 {
 public:
 	Shape(double x, double y);
 	~Shape();
-	bool isColliding(Shape* collider);
+	virtual bool isColliding(Shape* collider) = 0;
 
 	double x;
 	double y;
