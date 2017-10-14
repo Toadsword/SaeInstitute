@@ -7,25 +7,10 @@
 
 #include "Monster.h"
 
-void initMonster(Monster& monster)
-{
-	int race;
-	std::cout << "Please enter the stats of the monster (HP - AP - DP - S - Race(1 = Orc, 2 = Troll, 3 = Goblin\n";
-	std::cin >> monster.health;
-	std::cin >> monster.attackPower;
-	std::cin >> monster.defensivePower;
-	std::cin >> monster.speed;
-	std::cin >> race;
-	monster.race = static_cast<Race>(race);
-}
-
 int main()
 {
-	Monster m1;
-	Monster m2;
-
-	initMonster(m1);
-	initMonster(m2);
+	Monster m1 = Monster();
+	Monster m2 = Monster();
 
 	if (m1.race == m2.race)
 	{
