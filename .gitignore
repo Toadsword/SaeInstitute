@@ -32,7 +32,6 @@
 *.app
 
 # Base Projects Visual Studio
-*.sln
 *.ilk
 *.pdb
 *.vcxproj
